@@ -100,23 +100,12 @@
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src="bower_components/angular-touch/angular-touch.js"></script>
+<script src="bower_components/firebase/firebase.js"></script>
+<script src="bower_components/angularfire/dist/angularfire.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
-<script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBmBcJrOSbAy-dJIesNI5E_35YJLY-mAK8",
-    authDomain: "quito-envia.firebaseapp.com",
-    databaseURL: "https://quito-envia.firebaseio.com",
-    storageBucket: "quito-envia.appspot.com",
-    messagingSenderId: "253231686326"
-  };
-  firebase.initializeApp(config);
-</script>
-<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
 <script src="scripts/app.js"></script>
 <script src="scripts/controllers/main.js"></script>
 <script src="scripts/controllers/about.js"></script>

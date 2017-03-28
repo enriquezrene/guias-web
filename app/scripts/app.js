@@ -20,6 +20,17 @@ angular
     'ngSanitize',
     'ngTouch'
   ])
+
+  .run(['$rootScope', 'firebase', function ($rootScope, firebase) {
+    var config = {
+      apiKey: "AIzaSyBmBcJrOSbAy-dJIesNI5E_35YJLY-mAK8",
+      authDomain: "quito-envia.firebaseapp.com",
+      databaseURL: "https://quito-envia.firebaseio.com",
+      storageBucket: "quito-envia.appspot.com",
+      messagingSenderId: "253231686326"
+    };
+    firebase.initializeApp(config);
+  }])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

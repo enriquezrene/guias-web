@@ -8,8 +8,8 @@
  * Controller of the guiasWebApp
  */
 angular.module('guiasWebApp')
-  .controller('MainCtrl', ['$scope', '$firebaseObject', function ($scope, $firebaseObject) {
+  .controller('MainCtrl', ['$scope', '$firebaseObject', 'dateService', function ($scope, $firebaseObject, dateService) {
     $scope.today = new Date();
-    var ref = firebase.database().ref('28032017');
+    var ref = firebase.database().ref(dateService.getCurrentDateFormatted());
     $scope.codes = $firebaseObject(ref);
   }]);

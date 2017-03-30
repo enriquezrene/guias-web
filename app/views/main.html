@@ -4,11 +4,23 @@
     <thead style="background-color: #2980b9; color: white">
     <tr>
       <th>Bar Codes</th>
+      <th></th>
     </tr>
+
     </thead>
     <tbody>
     <tr ng-repeat="barcode in codes">
-      <td>{{ barcode }}</td>
+      <td>{{ barcode.code }}</td>
+      <td>
+        <!--<button type="button" class="btn btn-default" ngclipboard-->
+        <!--data-clipboard-text="{{ barcode.code }}">-->
+        <!--<span class="glyphicon glyphicon-copy"></span>-->
+        <!--</button>-->
+        <a href="#">
+        <span class="glyphicon glyphicon-copy" ngclipboard
+              data-clipboard-text="{{ barcode.code }}"></span>
+        </a>
+      </td>
     </tr>
     </tbody>
   </table>

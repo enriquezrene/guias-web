@@ -18,7 +18,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ngclipboard'
   ])
 
   .run(['$rootScope', 'firebase', function ($rootScope, firebase) {

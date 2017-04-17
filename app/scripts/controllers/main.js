@@ -13,7 +13,6 @@ angular.module('guiasWebApp')
     var ref = firebase.database().ref(getRef());
     $scope.codes = $firebaseObject(ref);
 
-
     function getRef() {
       var currentDate = new Date();
       var day = currentDate.getDate();
@@ -21,6 +20,13 @@ angular.module('guiasWebApp')
       var year = currentDate.getFullYear();
       return 'guias/v1/' + year + "/" + month + '/' + day;
     }
+
+    $scope.exportData = function () {
+      var blob = new Blob([document.getElementById('exportable').innerHTML], {
+        type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=utf-8"
+      });
+      saveAs(blob, "Report.xls");
+    };
 
   }]);
 

@@ -19,7 +19,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ngclipboard'
+    'ngclipboard',
+    'datetimepicker'
   ])
 
   .run(['$rootScope', 'firebase', function ($rootScope, firebase) {

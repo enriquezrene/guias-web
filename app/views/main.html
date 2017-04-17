@@ -1,4 +1,21 @@
-<h2>Bar Codes {{today | date:'yyyy-MM-dd'}}</h2>
+<form>
+  <div class="form-group">
+    <label for="calendar">Fecha</label>
+    <div class="input-group" id="calendar">
+									<span class="input-group-addon">
+										<i class="glyphicon glyphicon-calendar"></i>
+									</span>
+
+      <input type="text" id="dt1" class="form-control"
+             datetimepicker
+             ng-model="selectedDate"
+             datetimepicker-options="{format:'YYYY/M/DD'}"
+             name="time">
+    </div>
+  </div>
+  <button type="button" class="btn btn-sm btn-primary" ng-click="find()">Buscar</button>
+</form>
+
 
 <div style="text-align: right">
   <a href="#" ng-click="exportData()">
@@ -6,6 +23,7 @@
     <span class="glyphicon glyphicon-download-alt"></span>
   </a>
 </div>
+
 
 <div class="span6" id="exportable">
   <table class="table table-striped table-condensed">
